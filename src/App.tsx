@@ -3,19 +3,21 @@
 import './App.css'
 
 function App() {
-
-  function handleClick (){
-       alert('button clicked')
+  const handleClick = () => {
+    alert('Click me 3')
   }
- 
+
+
 
   return (
     <>
-      
-  <button onClick={handleClick}>Click me</button>
+
+      <button onClick={handleClick}>Click me2</button>
+      <button onClick={handleClick}>Click Me3</button>
+      <button onClick={() => alert('Click me 4')}>Click Me4</button>
 
 
-      
+
     </>
   )
 }

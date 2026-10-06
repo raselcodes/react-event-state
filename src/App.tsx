@@ -2,8 +2,10 @@
 
 import './App.css'
 // import Cart from './Card'
-import Counter from './counter'
-import Better from './better'
+// import Counter from './counter'
+// import Better from './better'
+import User from './User'
+import { Suspense } from 'react'
 
 function App() {
 //   const handleClick = () => {
@@ -18,11 +20,15 @@ function App() {
 
   return (
     <>
+<Suspense fallback={<p>Loading...</p>}> 
+    <User></User>
+
+    </Suspense>
 
     {/* <Cart></Cart> */}
-    <Counter></Counter>
+    {/* <Counter></Counter>
 
-    <Better></Better>
+    <Better></Better> */}
 
       {/* <button onClick={handleClick}>Click me2</button>
       <button onClick={handleClick}>Click Me3</button>
@@ -37,3 +43,6 @@ function App() {
 }
 
 export default App
+
+
+

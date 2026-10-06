@@ -7,6 +7,12 @@ import './App.css'
 import User from './User'
 import { Suspense } from 'react'
 
+const userDataPromise = async () => {
+  const res = await fetch ('https://jsonplaceholder.typicode.com/users');
+  const data = await res.json();
+  return data;
+} 
+
 function App() {
 //   const handleClick = () => {
 //     alert('Click me 3')
@@ -21,7 +27,7 @@ function App() {
   return (
     <>
 <Suspense fallback={<p>Loading...</p>}> 
-    <User></User>
+    <User userDataPromise={userDataPromise()}></User>
 
     </Suspense>
 

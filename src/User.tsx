@@ -13,6 +13,7 @@ export default User;
 /*
 * 1.Suspense fallback
 *2. create a promise function to load data 
+*3.send the promise to the component to load data
 /
 
 
